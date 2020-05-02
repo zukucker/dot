@@ -11,18 +11,17 @@ Plugin 'preservim/nerdtree'
 Plugin 'junegunn/fzf'
 Plugin 'preservim/nerdcommenter'
 Bundle 'OmniSharp/omnisharp-vim'
-Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ycm-core/YouCompleteMe'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax on
-set tabstop=4
-set softtabstop=4
-nmap <F6> :NERDTreeToggle<CR>
+set tabstop=2
+set softtabstop=2
+nnoremap ,t :NERDTreeToggle<CR>
 nmap <F3> :e $HOME/.vimrc<CR>
-nmap <C-h> :FZF<CR>
+nnoremap ,h :FZF<CR>
 nmap <C-t> :tabnew<CR>
 set number
 let g:OmniSharp_server_stdio = 1
