@@ -101,9 +101,9 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
+set $ws1 "1💻"
+set $ws2 "2🔍"
+set $ws3 "3📱"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -171,8 +171,21 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-#custom keybindings
+## custom keybindings
+
+# Rofi
 bindsym Ctrl+Mod1+space exec rofi  -show drun  -show-icons -display-drun "~"  -theme onedark -font "Hack 14"
+# Rofi Clipboard
+bindsym Ctrl+Mod1+p exec rofi -modi "clipboard:greenclip print" -theme onedark -show clipboard 
+# Screenshot Tool
+bindsym $mod+shift+s exec flameshot gui 
+# Thunar
+bindsym Ctrl+Mod1+e exec thunar
+
+# Sound Tool
+bindsym $mod+ctrl+p exec pavucontrol
+
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -189,6 +202,4 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom --backend xrender &
 exec_always  /bin/screenlayout.sh
 exec --no-startup-id flameshot &
-
-# Screenshot Tool
-bindsym $mod+shift+s exec flameshot gui 
+exec --no-startup-id greenclip daemon &

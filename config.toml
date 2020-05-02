@@ -25,6 +25,7 @@ format = "{1m}"
 block = "sound"
 step_width = 1
 driver = "auto"
+on_click = "pavucontrol"
 
 [[block]]
 block = "time"
