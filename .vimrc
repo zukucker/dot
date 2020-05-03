@@ -20,6 +20,7 @@ syntax on
 set tabstop=2
 set softtabstop=2
 nnoremap ,t :NERDTreeToggle<CR>
+nmap <F1> <nop>
 nmap <F3> :e $HOME/.vimrc<CR>
 nnoremap ,h :FZF<CR>
 nmap <C-t> :tabnew<CR>
